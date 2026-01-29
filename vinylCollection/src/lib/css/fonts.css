@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'font1';
+    src: url('/fonts/6Script.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('/fonts/DeftoneStylus.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font3';
+    src: url('/fonts/MiasScribblings.ttf') format('truetype');
+}
