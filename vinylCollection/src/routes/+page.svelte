@@ -619,45 +619,103 @@
 </div>
 
 <Modal open={isOpen}>
-    <button on:click={() => isOpen = false}>Close</button>
+    <div class="cardBtn">
+        <button on:click={() => isOpen = false}>Close</button>
+    </div>
     {#if activeCard === 1}
-        <h2>Card 1</h2>
-        <p>This is content for the first card</p>
+    <div class="cardContainer">
+        <div class="cardImg">
+            <img src="{base}/img/sunburnVinylDF.webp" alt="Picture of the Sunburn vinyl and inner sleeve and booklet." height="650px">
+        </div>
+        <div class="cardContent">
+            <h1>Sunburn - Dominic Fike</h1>
+            <p>IMAGES WILL BE REPLACED WITH MY OWN</p>
+        </div>
+    </div>
     {/if}
 
     {#if activeCard === 2}
-        <h2>Card 2</h2>
-        <p>Different content here</p>
+    <div class="cardContainer">
+        <div class="cardImg">
+            <img src="{base}/img/14minutesDF.jpg" alt="Picture of the 14 Minutes vinyl." height="650px">
+        </div>
+        <div class="cardContent">
+            <h1>14 Minutes - Dominic Fike</h1>
+            <p>WIP</p>
+        </div>
+    </div>
     {/if}
 
     {#if activeCard === 3}
-        <h2>Card 3</h2>
-        <p>Different content here</p>
+    <div class="cardContainer">
+        <div class="cardImg">
+            <img src="{base}/img/wcpgwVinylDF.jpg" alt="Picture of the What Could Possibly Go Wrong vinyl." height="650px">
+        </div>
+        <div class="cardContent">
+            <h1>What Could Possibly Go Wrong - Dominic Fike</h1>
+            <p>WIP</p>
+        </div>
+    </div>
     {/if}
 
     {#if activeCard === 4}
-        <h2>Card 4</h2>
-        <p>Different content here</p>
+    <div class="cardContainer">
+        <div class="cardImg">
+            <img src="{base}/img/tltisywytkVinylLS.webp" alt="Picture of The Love That I Showed You Was Yours To Keep vinyl." height="650px">
+        </div>
+        <div class="cardContent">
+            <h1>The Love That I Showed You Was Yours To Keep - Love Spells</h1>
+            <p>WIP</p>
+        </div>
+    </div>
     {/if}
 
     {#if activeCard === 5}
-        <h2>Card 5</h2>
-        <p>Different content here</p>
+    <div class="cardContainer">
+        <div class="cardImg">
+            <img src="{base}/img/blushVinylKA.jpg" alt="Picture of Blush vinyl." height="650px">
+        </div>
+        <div class="cardContent">
+            <h1>Blush - Kevin Abstract</h1>
+            <p>WIP</p>
+        </div>
+    </div>
     {/if}
 
     {#if activeCard === 6}
-        <h2>Card 6</h2>
-        <p>Different content here</p>
+    <div class="cardContainer">
+        <div class="cardImg">
+            <img src="{base}/img/romanceVinylFDC.png" alt="Picture of the Romance vinyls." height="650px">
+        </div>
+        <div class="cardContent">
+            <h1>Romance - Fontaines D.C.</h1>
+            <p>WIP</p>
+        </div>
+    </div>
     {/if}
 
     {#if activeCard === 7}
-        <h2>Card 7</h2>
-        <p>Different content here</p>
+    <div class="cardContainer">
+        <div class="cardImg">
+            <img src="{base}/img/skintyfiaVinylFDC.png" alt="Picture for Skinty Fia vinyl." height="650px">
+        </div>
+        <div class="cardContent">
+            <h1>Skinty Fia - Fontaines D.C.</h1>
+            <p>WIP</p>
+        </div>
+    </div>
     {/if}
 
     {#if activeCard === 8}
-        <h2>Card 8</h2>
-        <p>Different content here</p>
+    <div class="cardContainer">
+        <div class="cardImg">
+            <img src="{base}/img/frootVinylM.webp" alt="Picture of Froot vinyl." height="650px">
+        </div>
+        <div class="cardContent">
+            <h1>Froot - Marina</h1>
+            <p>WIP</p>
+        </div>
+    </div>
     {/if}
 
     {#if activeCard === 9}
@@ -946,7 +1004,29 @@
         justify-self: center;
     }
 
-    button {
-        float: right;
+    .cardBtn {
+        display: flex;
+        justify-content:right;
+        margin-bottom: 0.5%;
+    }
+
+    .cardContainer {
+        display: flex;
+    }
+
+    .cardImg {
+        margin-right: 1%;
+    }
+
+    .cardContent {
+        max-width: 47%;
+        min-width: 47%;
+        justify-items: left;
+    }
+
+    h1 {
+        font-size: xx-large;
+        font-family: 'font3';
+        font-weight: 100;
     }
 </style>
