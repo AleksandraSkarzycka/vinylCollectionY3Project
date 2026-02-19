@@ -31,7 +31,7 @@
 <style>
     
     header {
-        background-color: rgba(140, 173, 139);
+        background-color: #FDF5E6;
         padding: 1rem;
         text-align: center;
 		position: fixed;
@@ -65,7 +65,7 @@
     footer {
 		font-family: 'font3', sans-serif;
 		font-size: large;
-        background-color: rgba(140, 173, 139);
+        background-color: #FDF5E6;
         color: rgb(0, 0, 0);
         text-align: center;
         padding: 1rem;

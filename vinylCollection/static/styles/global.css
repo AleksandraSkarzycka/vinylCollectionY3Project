@@ -5,7 +5,7 @@
    :root {
     /* Color Variables */
     --primary-color: #007bff;
-    --background-color: rgba(241, 231, 191);
+    --background-color: rgb(128, 133, 143);
     --text-color: #000000;
     --link-hover-color: #0056b3;
 

@@ -37,7 +37,7 @@
     }
 
     .card {
-        background-color: rgba(251, 181, 194);
+        background-color: #FFFAF0;
         padding: 1rem;
         border-radius: 5px;
         display: grid;
