@@ -12,3 +12,18 @@
     font-family: 'font3';
     src: url('/fonts/MiasScribblings.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'font4';
+    src: url('/fonts/LTCarpet.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font5';
+    src: url('/fonts/talldark.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font6';
+    src: url('/fonts/RobotoRegular.ttf') format('truetype');
+}

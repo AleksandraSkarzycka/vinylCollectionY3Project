@@ -78,3 +78,22 @@ a:hover {
     margin: 0 auto;
     padding: var(--spacing-medium);
 }
+
+/* Hide scrollbar by default */
+      ::-webkit-scrollbar {
+        width: 0.5em;
+        background-color: #f5f5f5;
+        border-radius: 20px;
+      }
+
+      /* Make scrollbar visible when needed */
+      ::-webkit-scrollbar-thumb {
+        background-color: #d3d3d3;
+        border-radius: 20px;
+      }
+
+      /* Make scrollbar track visible when needed */
+      ::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+        border-radius: 20px;
+      }

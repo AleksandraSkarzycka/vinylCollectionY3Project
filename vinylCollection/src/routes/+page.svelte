@@ -48,6 +48,19 @@
         </div>
         <div class="vDesc">
             <h1 class="mTitle">{selectedVinyl.vinylTitle}</h1>
+            <p class="thoughts">{selectedVinyl.vinylDesc}</p>
+
+        {#if selectedVinyl.spotifyEmbed}
+            <!-- svelte-ignore a11y_missing_attribute -->
+            <iframe
+                src={selectedVinyl.spotifyEmbed}
+                width="100%"
+                height="352"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+        {/if}
         </div>
         <div class="mBtn">
             <button on:click={closeModal}>Close</button>
@@ -111,7 +124,7 @@
     }
 
     .modal {
-        background: white;
+        background: #FFFAF0;
         padding: 2rem;
         border-radius: 12px;
         max-width: 70%;
@@ -119,7 +132,7 @@
         max-height: 65%;
         height: 65%;
         display: flex;
-        flex-direction: row
+        flex-direction: row;
     }
 
     button {
@@ -147,15 +160,19 @@
     }
 
     .vDesc {
-        font-family: 'font3', sans-serif;
-        font-weight: 100;
-        background-color: aquamarine;
         max-width: 60%;
         width: 60%;
         text-align: left;
+        overflow-y: auto;
     }
 
     .mTitle {
-        font-weight: 100;
+        font-family: 'font4', sans-serif;
+        font-size: 45px
+    }
+
+    .thoughts {
+        font-size: 20px;
+        font-family: 'font6', sans-serif;
     }
 </style>
