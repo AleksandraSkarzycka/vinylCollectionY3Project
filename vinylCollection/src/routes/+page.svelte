@@ -28,8 +28,12 @@
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <!-- svelte-ignore a11y_no_static_element_interactions -->
     <div class="card" on:click={() => openModal(vinyl)}>
-      <img src={vinyl.vinylImg} alt={vinyl.vinylTitle} />
-      <h2>{vinyl.vinylTitle}</h2>
+        <div class="vImg">
+            <img src={vinyl.vinylImg} alt={vinyl.vinylTitle} />
+        </div>
+        <div class="vTitle">
+            <h2>{vinyl.vinylTitle}</h2>
+        </div>
     </div>
   {/each}
 </div>
@@ -39,9 +43,15 @@
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div class="modal-backdrop" on:click={closeModal}>
     <div class="modal" on:click|stopPropagation>
-      <img src={selectedVinyl.vinylImg} alt={selectedVinyl.vinylTitle} />
-      <h2>{selectedVinyl.vinylTitle}</h2>
-      <button on:click={closeModal}>Close</button>
+        <div class="mImg">
+            <img src={selectedVinyl.vinylImg} alt={selectedVinyl.vinylTitle} />
+        </div>
+        <div class="vDesc">
+            <h1 class="mTitle">{selectedVinyl.vinylTitle}</h1>
+        </div>
+        <div class="mBtn">
+            <button on:click={closeModal}>Close</button>
+        </div>
     </div>
   </div>
 {/if}
@@ -79,7 +89,6 @@
         width: 100%;
         height: auto;
         border-radius: 2px;
-        margin-bottom: 0.75rem;
         object-fit: cover;
     }
 
@@ -105,8 +114,48 @@
         background: white;
         padding: 2rem;
         border-radius: 12px;
-        max-width: 500px;
-        width: 90%;
-        text-align: center;
+        max-width: 70%;
+        width: 70%;
+        max-height: 65%;
+        height: 65%;
+        display: flex;
+        flex-direction: row
+    }
+
+    button {
+        padding: 0.4rem 1rem;
+        background-color: #666666;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 10px;
+        margin-left: 1rem;
+    }
+
+    .vImg {
+        margin-bottom: 0.75rem;
+    }
+
+    .mImg {
+        max-width: 40%;
+        width: 40%;
+        height: auto;
+        margin-bottom: 1rem;
+        align-self: center;
+        margin-right: 1rem;
+    }
+
+    .vDesc {
+        font-family: 'font3', sans-serif;
+        font-weight: 100;
+        background-color: aquamarine;
+        max-width: 60%;
+        width: 60%;
+        text-align: left;
+    }
+
+    .mTitle {
+        font-weight: 100;
     }
 </style>
