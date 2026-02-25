@@ -71,8 +71,9 @@
 
 <style>
     .title {
-        font-family: 'font3', sans-serif;
-        font-weight: 100;
+        font-family: 'font4', sans-serif;
+        font-weight: 1000;
+        letter-spacing: 5px;
         font-size: xx-large;
         text-align: center;
         padding-top: 4%;
@@ -106,8 +107,8 @@
     }
 
     h2 {
-        font-family: 'font3', sans-serif;
-        font-weight: 100;
+        font-family: 'font7', sans-serif;
+        font-weight: 1000;
         font-size: 20px;
         text-align: center;
         align-self: center;
@@ -173,6 +174,6 @@
 
     .thoughts {
         font-size: 20px;
-        font-family: 'font6', sans-serif;
+        font-family: 'font7', sans-serif;
     }
 </style>

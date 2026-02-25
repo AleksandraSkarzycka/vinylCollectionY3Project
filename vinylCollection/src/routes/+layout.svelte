@@ -51,7 +51,9 @@
     }
     
     nav ul li a {
-		font-family: 'font3', sans-serif;
+		font-family: 'font4', sans-serif;
+        font-weight: 1000;
+        letter-spacing: 5px;
 		font-size: large;
         text-decoration: none;
         color: rgb(0, 0, 0);
@@ -63,7 +65,9 @@
     }
     
     footer {
-		font-family: 'font3', sans-serif;
+		font-family: 'font4', sans-serif;
+        font-weight: 1000;
+        letter-spacing: 5px;
 		font-size: large;
         background-color: #FDF5E6;
         color: rgb(0, 0, 0);

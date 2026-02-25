@@ -27,3 +27,8 @@
     font-family: 'font6';
     src: url('/fonts/RobotoRegular.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'font7';
+    src: url('/fonts/LTCushionMedium.ttf') format('truetype');
+}
