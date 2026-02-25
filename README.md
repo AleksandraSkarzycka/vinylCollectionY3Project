@@ -1,7 +1,7 @@
 # Year 3 Project - Vinyl Collection
-Name - Aleksandra Skarzycka
-Student ID - C00294397
-Supervisor - David Hearne
+Name - Aleksandra Skarzycka <br/>
+Student ID - C00294397 <br/>
+Supervisor - David Hearne <br/>
 
 
 ## Websites I found Useful
