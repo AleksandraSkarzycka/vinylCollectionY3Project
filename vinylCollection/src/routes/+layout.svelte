@@ -15,6 +15,13 @@
             <li><a href="{base}/selling">Selling</a></li>
         </ul>
     </nav>
+    <div class="dropdown">
+        <img class="profile" src="{base}/img/ProfileIcon.png" alt="A blue profile icon" width="30px">
+        <div class="dropdown-content">
+            <a href="#">Login/Register</a>
+            <a href="#">Likes</a>
+        </div>
+    </div>
 </header>
 
 <!-- Page Content -->
@@ -33,9 +40,16 @@
     header {
         background-color: #FDF5E6;
         padding: 1rem;
-        text-align: center;
 		position: fixed;
 		width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .profile {
+        float: right;
     }
     
     nav ul {
@@ -75,5 +89,41 @@
         padding: 1rem;
         bottom: 0;
         width: 100%;
+    }
+
+    /* I got this dropdown css from W3Schools, tweaked colours and a bit of the positioning myself */
+    .dropdown {
+        position: relative;
+    }
+
+    /* Dropdown content */
+    .dropdown-content {
+        background-color: #FDF5E6;
+        display: none;
+        position: absolute;
+        right: 0;
+        margin-top: 1.7%;
+        min-width: fit-content;
+        max-width: fit-content;
+        width: fit-content;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    /* Links inside dropdown content */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #f1f1f1
+    }
+
+    /* Show the dropdown content on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 </style>
