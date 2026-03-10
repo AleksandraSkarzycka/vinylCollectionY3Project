@@ -18,8 +18,8 @@
     <div class="dropdown">
         <img class="profile" src="{base}/img/ProfileIcon.png" alt="A blue profile icon" width="30px">
         <div class="dropdown-content">
-            <a href="#">Login/Register</a>
-            <a href="#">Likes</a>
+            <a href="{base}/login">Login/Register</a>
+            <a href="{base}/likes">Likes</a>
         </div>
     </div>
 </header>
