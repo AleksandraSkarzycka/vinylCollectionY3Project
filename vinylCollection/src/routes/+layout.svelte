@@ -1,6 +1,19 @@
-<script>
+<script lang="ts">
 	import { base } from "$app/paths";
 	import "$lib/css/fonts.css";
+
+    import { invalidate } from '$app/navigation'
+	import { onMount } from 'svelte'
+	let { data, children } = $props()
+	let { supabase, session } = $derived(data)
+	onMount(() => {
+		const { data } = supabase.auth.onAuthStateChange((event, _session) => {
+			if (_session?.expires_at !== session?.expires_at) {
+				invalidate('supabase:auth')
+			}
+		})
+		return () => data.subscription.unsubscribe()
+	})
 
     // Import components
 </script>
@@ -12,13 +25,13 @@
         <ul>
             <li><a href="{base}/">Collection</a></li>
             <li><a href="{base}/wishlist">Wishlist</a></li>
-            <li><a href="{base}/selling">Selling</a></li>
         </ul>
     </nav>
     <div class="dropdown">
         <img class="profile" src="{base}/img/ProfileIcon.png" alt="A blue profile icon" width="30px">
         <div class="dropdown-content">
-            <a href="{base}/login">Login/Register</a>
+            <a href="{base}/login">Login</a>
+            <a href="{base}/account">Account</a>
             <a href="{base}/likes">Likes</a>
         </div>
     </div>
