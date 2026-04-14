@@ -4,10 +4,10 @@
 
     export let data;
 
-    let selectedVinyl = null;
+    let selectedVinyl: { vinylImg: any; vinylTitle: any; vinylDesc: any; spotifyEmbed: any; } | null = null;
     let showModal = false;
 
-    function openModal(vinyl) {
+    function openModal(vinyl: { vinylImg: any; vinylTitle: any; vinylDesc: any; spotifyEmbed: any; } | null) {
         console.log('Clicked:', vinyl); // debug
         selectedVinyl = vinyl;
         showModal = true;
