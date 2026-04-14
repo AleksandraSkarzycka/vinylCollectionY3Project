@@ -55,7 +55,7 @@
             <iframe
                 src={selectedVinyl.spotifyEmbed}
                 width="100%"
-                height="352"
+                height="450"
                 frameborder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy">
