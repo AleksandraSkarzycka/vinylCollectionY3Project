@@ -78,7 +78,7 @@
     }
     
     nav ul li a {
-		font-family: 'font4', sans-serif;
+		font-family: 'font1', sans-serif;
         font-weight: 1000;
         letter-spacing: 5px;
 		font-size: large;
@@ -92,7 +92,7 @@
     }
     
     footer {
-		font-family: 'font4', sans-serif;
+		font-family: 'font1', sans-serif;
         font-weight: 1000;
         letter-spacing: 5px;
 		font-size: large;

@@ -1,34 +1,9 @@
 @font-face {
     font-family: 'font1';
-    src: url('/fonts/6Script.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'font2';
-    src: url('/fonts/DeftoneStylus.otf') format('truetype');
-}
-
-@font-face {
-    font-family: 'font3';
-    src: url('/fonts/MiasScribblings.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'font4';
     src: url('/fonts/LTCarpet.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'font5';
-    src: url('/fonts/talldark.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'font6';
-    src: url('/fonts/RobotoRegular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'font7';
+    font-family: 'font2';
     src: url('/fonts/LTCushionMedium.ttf') format('truetype');
 }

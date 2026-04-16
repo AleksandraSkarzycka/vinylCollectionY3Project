@@ -71,7 +71,7 @@
 
 <style>
     .title {
-        font-family: 'font4', sans-serif;
+        font-family: 'font1', sans-serif;
         font-weight: 1000;
         letter-spacing: 5px;
         font-size: xx-large;
@@ -107,7 +107,7 @@
     }
 
     h2 {
-        font-family: 'font7', sans-serif;
+        font-family: 'font2', sans-serif;
         font-weight: 1000;
         font-size: 20px;
         text-align: center;
@@ -168,12 +168,12 @@
     }
 
     .mTitle {
-        font-family: 'font4', sans-serif;
+        font-family: 'font1', sans-serif;
         font-size: 45px
     }
 
     .thoughts {
         font-size: 20px;
-        font-family: 'font7', sans-serif;
+        font-family: 'font2', sans-serif;
     }
 </style>
