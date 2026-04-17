@@ -7,10 +7,14 @@
 	let { supabase, session, profile } = $derived(data)
 	let profileForm: HTMLFormElement
 	let loading = $state(false)
-	let fullName: string = profile?.full_name ?? ''
-	let username: string = profile?.username ?? ''
-	let website: string = profile?.website ?? ''
-	let avatarUrl: string = $state(profile?.avatar_url ?? '')
+	// svelte-ignore state_referenced_locally
+		let fullName: string = profile?.full_name ?? ''
+	// svelte-ignore state_referenced_locally
+		let username: string = profile?.username ?? ''
+	// svelte-ignore state_referenced_locally
+		let website: string = profile?.website ?? ''
+	// svelte-ignore state_referenced_locally
+		let avatarUrl: string = $state(profile?.avatar_url ?? '')
 
 	const handleSubmit: SubmitFunction = () => {
 		loading = true
