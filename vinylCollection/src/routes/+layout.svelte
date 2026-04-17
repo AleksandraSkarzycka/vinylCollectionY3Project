@@ -27,12 +27,12 @@
             <li><a href="{base}/wishlist">Wishlist</a></li>
         </ul>
     </nav>
-    <div class="dropdown">
+    <div class="dropdown" tabindex=0>
         <img class="profile" src="{base}/img/ProfileIcon.png" alt="A blue profile icon" width="30px">
         <div class="dropdown-content">
-            <a href="{base}/login">Login</a>
-            <a href="{base}/account">Account</a>
-            <a href="{base}/likes">Likes</a>
+            <a tabindex=0 href="{base}/login">Login</a>
+            <a tabindex=0 href="{base}/account">Account</a>
+            <a tabindex=0 href="{base}/likes">Likes</a>
         </div>
     </div>
 </header>

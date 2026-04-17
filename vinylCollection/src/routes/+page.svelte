@@ -27,7 +27,7 @@
   {#each data.vinyls as vinyl (vinyl.id)}
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <!-- svelte-ignore a11y_no_static_element_interactions -->
-    <div class="card" on:click={() => openModal(vinyl)}>
+    <div class="card" on:click={() => openModal(vinyl)} tabindex=0>
         <div class="vImg">
             <img src={vinyl.vinylImg} alt={vinyl.vinylTitle} />
         </div>
