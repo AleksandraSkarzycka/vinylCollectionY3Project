@@ -1,14 +1,15 @@
 // src/routes/+page.server.ts
 import { fail, redirect } from '@sveltejs/kit'
 import type { Actions, PageServerLoad } from './$types'
+
 export const prerender = false;
 
-export const load: PageServerLoad = async ({ url, locals: { safeGetSession } }) => {
-  const { session } = await safeGetSession()
+export const load: PageServerLoad = async ({ url, locals: { supabase } }) => {
+  const { data, error } = await supabase.auth.getClaims()
 
   // if the user is already logged in return them to the account page
-  if (session) {
-    redirect(303, '/account')
+  if (!error && data?.claims) {
+    throw redirect(303, '/account')
   }
 
   return { url: url.origin }
