@@ -4,11 +4,10 @@ import type { Actions, PageServerLoad } from './$types'
 
 export const prerender = false;
 
-export const load: PageServerLoad = async ({ url, locals: { supabase } }) => {
-  const { data, error } = await supabase.auth.getClaims()
+export const load: PageServerLoad = async ({ url, locals }) => {
+  const { session, user } = await locals.safeGetSession()
 
-  // if the user is already logged in return them to the account page
-  if (!error && data?.claims) {
+  if (session && user) {
     throw redirect(303, '/account')
   }
 
@@ -30,7 +29,12 @@ export const actions: Actions = {
       return fail(400, { errors: { email: 'Please enter a valid email address' }, email })
     }
 
-    const { error } = await supabase.auth.signInWithOtp({ email })
+    const { error } = await supabase.auth.signInWithOtp({
+                        email,
+                        options: {
+                          emailRedirectTo: `${url.origin}/account`
+                          }
+                        })
 
     if (error) {
       return fail(400, {

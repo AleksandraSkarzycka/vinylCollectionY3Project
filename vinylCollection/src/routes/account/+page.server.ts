@@ -1,41 +1,40 @@
 import { fail, redirect } from '@sveltejs/kit'
 import type { Actions, PageServerLoad } from './$types'
+
 export const prerender = false;
 
-export const load: PageServerLoad = async ({ locals: { supabase } }) => {
-  const { data: claimsData, error } = await supabase.auth.getClaims()
+export const load: PageServerLoad = async ({ locals }) => {
+  const { session, user } = await locals.safeGetSession()
 
-  if (error || !claimsData?.claims) {
-    redirect(303, '/')
+  if (!session || !user) {
+    throw redirect(303, '/')
   }
 
-  const { claims } = claimsData
-
-  const { data: profile } = await supabase
+  const { data: profile } = await locals.supabase
     .from('profiles')
     .select(`username, full_name, website, avatar_url`)
-    .eq('id', claims.sub)
+    .eq('id', user.id)
     .single()
 
-  return { claims, profile }
+  return { session, profile }
 }
 
 export const actions: Actions = {
-  update: async ({ request, locals: { supabase } }) => {
+  update: async ({ request, locals }) => {
     const formData = await request.formData()
     const fullName = formData.get('fullName') as string
     const username = formData.get('username') as string
     const website = formData.get('website') as string
     const avatarUrl = formData.get('avatarUrl') as string
 
-    const { data: claimsData, error: claimsError } = await supabase.auth.getClaims()
+    const { session, user } = await locals.safeGetSession()
 
-    if (claimsError || !claimsData?.claims) {
-      return fail(401, { fullName, username, website, avatarUrl })
-    }
+    if (!session || !user) {
+          return fail(401, { fullName, username, website, avatarUrl })
+        }
 
-    const { error } = await supabase.from('profiles').upsert({
-      id: claimsData.claims.sub,
+    const { error } = await locals.supabase.from('profiles').upsert({
+      id: user.id,
       full_name: fullName,
       username,
       website,
@@ -61,6 +60,6 @@ export const actions: Actions = {
   },
   signout: async ({ locals: { supabase } }) => {
     await supabase.auth.signOut()
-    redirect(303, '/')
+    throw redirect(303, '/')
   },
 }
